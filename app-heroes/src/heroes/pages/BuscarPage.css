@@ -1,0 +1,23 @@
+li:hover {
+    cursor: pointer;
+}
+
+.buscador {
+    outline: none;
+    border: none;
+    border-radius: 999px 999px 999px 999px;
+    height: 50px;
+    text-align: center;
+}
+
+.buscador > input {
+    outline: none;
+    border: none;
+}
+
+.buscador > button {
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: none;
+}

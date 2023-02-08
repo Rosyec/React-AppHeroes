@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../../assets/Roboto-Light.ttf') format("truetype");
+  }
+
+navbar > img {
+    height: 35px;
+}
+
+body {
+    font-family: Roboto;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}

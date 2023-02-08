@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto') url(./assets/Roboto-Light.ttf) format("truetype");
+}
+
+*{
+    font-family: 'Roboto';
+}
+
+body, .login{
+    min-height: 100vh;
+}
+
+.input > input {
+    width: 300px;
+    outline: none;
+    border: none;
+    border-radius: 999px 999px 999px 999px;
+    height: 50px;
+    text-align: center;
+}
+
+#myBtnConfirm {
+    color: white;
+    background-color: #333;
+    height: 50px;
+    width: 300px;
+    outline: none!important;
+    border: none;
+    border-radius: 999px 999px 999px 999px;
+}
+
+#myBtnConfirm:hover{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(69,129,252,1) 100%);
+}
+
+.img-avatar__ia {
+    width: 200px;
+}
+
+#myImage {
+    border-radius: 999px 999px 999px 999px;
+    width: 200px;
+    height: 200px;
+}
+
