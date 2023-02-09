@@ -13,13 +13,7 @@ export const HeroesApp = () => {
     <>
       <NavBar></NavBar>
       <div id='patern' className="container text-center">
-        {
-          (state.logged)
-            ?
-            <Outlet></Outlet>
-            :
-            <Navigate to={'/login'} />
-        }
+        <Outlet></Outlet>
       </div>
       <Footer></Footer>
     </>

@@ -28,7 +28,7 @@ export const LoginPage = () => {
 return (
   <>
   {
-    ( Context.state.logged ) && <Navigate to={'/app/dc'} replace={true} />
+    ( Context.state.logged ) && <Navigate to={'/app/dc'} replace/>
   }
     <div className="container text-center animate__animated animate__fadeIn">
       <div className="login d-flex align-items-center justify-content-center">

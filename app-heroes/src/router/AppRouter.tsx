@@ -6,15 +6,17 @@ import { DcPage } from '../heroes/pages/DcPage';
 import { HeroePage } from '../heroes/pages/HeroePage';
 import { MarvelPage } from '../heroes/pages/MarvelPage';
 import { HeroesApp } from '../HeroesApp';
+import { PrivateRoutes } from './PrivateRoutes';
+import { PublicRoutes } from './PublicRoutes';
 
 export const AppRouter = createBrowserRouter([
     {
-        path: '/',
+        path: '/*',
         element: <Navigate to={'/login'} />
     },
     {
-        path: 'app',
-        element: <HeroesApp></HeroesApp>,
+        path: '/app/*',
+        element: <PrivateRoutes><HeroesApp/></PrivateRoutes>,
         children: [
             {
                 path: 'dc',
@@ -40,11 +42,7 @@ export const AppRouter = createBrowserRouter([
 
     },
     {
-        path: 'login',
-        element: <LoginPage></LoginPage>
+        path: '/login/*',
+        element: <PublicRoutes><LoginPage/></PublicRoutes>
     },
-    {
-        path: '*',
-        element: <Navigate to={'app/dc'}></Navigate>
-    }
 ]);
