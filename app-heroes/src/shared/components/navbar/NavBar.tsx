@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import './NavBar.css'
 import Logo from '../../../assets/superhero.png'
+import { AuthContext } from '../../../auth/context/AuthContext'
 
 export const NavBar = () => {
 
     const navigate = useNavigate();
-
-    const user = localStorage.getItem('user') || 'Usuario';
+    const Context = useContext( AuthContext );
 
     const onLogout = () => {
+        Context.onLogout();
         navigate( '/login', { replace: true } )
     }
 
@@ -36,7 +37,7 @@ export const NavBar = () => {
                             </li>
                         </ul>
                             <span className="spacer"></span>
-                            <span className=''>{ user }</span>
+                            <span className=''>{ Context.state.name }</span>
                             <span className='mx-2'>|</span>
                             <a onClick={ onLogout } className='btn btn-outline-dark'>Logout</a>
                     </div>
