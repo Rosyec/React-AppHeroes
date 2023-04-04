@@ -1,18 +1,18 @@
-import React, { createContext } from 'react'
+import React, { createContext } from "react";
 
 export const AuthContext = createContext<Props>({
-    onLogin: () => {},
-    onLogout: () => {},
-    state: {logged: false, name: ''}
+  onLogin: () => {},
+  onLogout: () => {},
+  state: { logged: false, name: "" },
 });
 
 interface Props {
-    onLogin: ( username: string ) => void,
-    onLogout: () => void,
-    state: State
+  onLogin: (username: string) => void;
+  onLogout: () => void;
+  state: State;
 }
 
 interface State {
-    logged: boolean,
-    name?: string
+  logged: boolean;
+  name?: string;
 }

@@ -1,12 +1,11 @@
-import React from 'react'
-import { Slider } from '../../shared/components/slider/Slider';
-import { getHeroeByPublisher } from '../helpers/getHeroeByPublisher';
-import { Hero } from '../interfaces/heroe';
+import { Slider } from "../../shared/components/slider/Slider";
+import { getHeroeByPublisher } from "../helpers/getHeroeByPublisher";
+import { Hero } from "../interfaces/heroe";
 
 export const MarvelPage = () => {
   const getHeroes = (): Hero[] => {
-    return getHeroeByPublisher('Marvel Comics');
-  }
+    return getHeroeByPublisher("Marvel Comics");
+  };
 
   return (
     <>
@@ -16,6 +15,5 @@ export const MarvelPage = () => {
         </div>
       </div>
     </>
-
-  )
-}
+  );
+};

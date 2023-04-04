@@ -1,23 +1,22 @@
-import { type } from '../types/type'
+import { type } from "../types/type";
 
 export const authReducer = (initialState: State, action: Type) => {
-
-    switch (action.type) {
-        case type.login:
-            return { ...initialState, logged: true, name: action.payload }
-        case type.logout:
-            return { logged: false }
-        default:
-            return initialState;
-    }
-}
+  switch (action.type) {
+    case type.login:
+      return { ...initialState, logged: true, name: action.payload };
+    case type.logout:
+      return { logged: false };
+    default:
+      return initialState;
+  }
+};
 
 interface Type {
-    type: string,
-    payload: string
+  type: string;
+  payload: string;
 }
 
 interface State {
-    logged: boolean,
-    name?: string
+  logged: boolean;
+  name?: string;
 }
