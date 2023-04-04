@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from "react";
+import { SyntheticEvent } from "react";
 
 export const SearchField = ({ onInputPatern }: Props) => {
   return (
@@ -6,7 +6,7 @@ export const SearchField = ({ onInputPatern }: Props) => {
       <div className="row">
         <h1>Buscador de héroes</h1>
         <div
-          className="row bg-white SearchField d-flex justify-content-center align-items-center"
+          className="row bg-white buscador d-flex justify-content-center align-items-center"
           style={{ width: "100%" }}
         >
           <button
